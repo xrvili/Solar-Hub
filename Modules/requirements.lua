@@ -6,6 +6,6 @@ return {
     "isfunctionhooked",
     "restorefunction",
     "getrawmetatable",
-    {"http_request","syn.request","request","HttpPost"}
+    {"request","syn.request","http_request","HttpPost"}
   },
 }

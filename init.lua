@@ -1,4 +1,7 @@
 local Requirements = loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Modules/requirements.lua'))()
+
+local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and cloneref or function(...) return ... end
+
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 

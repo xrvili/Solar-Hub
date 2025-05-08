@@ -1,5 +1,5 @@
 return {
-  ["Hoops Life"] = "v1.0.0",
+  [2931782391] = "v1.0.0",
   ["ReaHListic"] = "v1.0.0",
   ["Hoop Nation"] = "v1.0.0",
   ["RH2"] = "v1.0.0",

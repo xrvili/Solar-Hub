@@ -41,4 +41,4 @@ if #Missing >= 1 then
     return
 end
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Key-System/system.lua))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Key-System/system.lua'))()

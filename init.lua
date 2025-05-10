@@ -1,4 +1,9 @@
-local Requirements = loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Modules/requirements.lua'))()
+local Requirements = loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Modules/requirements.lua'))() or {}
+
+table.insert(Requirements,"cloneref")
+table.insert(Requirements,"isfile")
+table.insert(Requirements,"readfile")
+table.insert(Requirements,"writefile")
 
 local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and cloneref or function(...) return ... end
 
@@ -35,3 +40,5 @@ if #Missing >= 1 then
     CoreGui.RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.TextScaled = true
     return
 end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Key-System/system.lua))()

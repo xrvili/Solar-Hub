@@ -5,7 +5,7 @@ table.insert(Requirements,"isfile")
 table.insert(Requirements,"readfile")
 table.insert(Requirements,"writefile")
 
-local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and cloneref or function(...) return ... end
+local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and getgenv().cloneref or function(...) return ... end
 
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")

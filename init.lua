@@ -36,9 +36,9 @@ for i, v in pairs(Requirements[game.GameId]) do
 end
 
 if getgenv().identifyexecutor then
-    local Executor = getgenv().identifyexecutor()
+    local Executor = getgenv().identifyexecutor():lower()
     for i, v in ipairs(BlacklistedExecutors) do
-        if string.find(Executor,v) then
+        if string.find(v, Executor) then
             table.insert(Missing, "Improper executor functionality")
             break
         end

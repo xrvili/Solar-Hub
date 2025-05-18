@@ -3,15 +3,17 @@ local BlacklistedExecutors = {
     "velocity",
 }
 
-table.insert(Requirements,"cloneref")
-table.insert(Requirements,"isfile")
-table.insert(Requirements,"readfile")
-table.insert(Requirements,"writefile")
+for i, v in pairs(Requirements) do
+    table.insert(i, "cloneref")
+    table.insert(i, "isfile")
+    table.insert(i, "readfile")
+    table.insert(i, "writefile")
+end
 
 local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and getgenv().cloneref or function(...) return ... end
 
-local Players = game:GetService("Players")
-local CoreGui = game:GetService("CoreGui")
+local Players = clonerefs(game:GetService("Players"))
+local CoreGui = clonerefs(game:GetService("CoreGui"))
 
 local Missing = {}
 

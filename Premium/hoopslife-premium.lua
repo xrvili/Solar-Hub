@@ -182,7 +182,7 @@ local Commands = {
     ["void"] = {
         Restricted = {},
         Callback = function()
-            if Cache.Frozen or not HumanodiRootPart then
+            if Cache.Frozen or not HumanoidRootPart then
                 return
             end
             Cache.Voided = true
@@ -196,7 +196,7 @@ local Commands = {
     ["unvoid"] = {
         Restricted = {},
         Callback = function()
-            if Cache.Frozen or not HumanodiRootPart then
+            if Cache.Frozen or not HumanoidRootPart then
                 return
             end
             HumanoidRootPart.CFrame = Cache.VoidCFrame

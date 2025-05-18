@@ -4,10 +4,10 @@ local BlacklistedExecutors = {
 }
 
 for i, v in pairs(Requirements) do
-    table.insert(i, "cloneref")
-    table.insert(i, "isfile")
-    table.insert(i, "readfile")
-    table.insert(i, "writefile")
+    table.insert(v, "cloneref")
+    table.insert(v, "isfile")
+    table.insert(v, "readfile")
+    table.insert(v, "writefile")
 end
 
 local clonerefs = getgenv().cloneref and typeof(getgenv().cloneref) == "function" and getgenv().cloneref or function(...) return ... end

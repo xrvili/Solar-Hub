@@ -1,4 +1,7 @@
 local Requirements = loadstring(game:HttpGet('https://raw.githubusercontent.com/xrvili/Solar-Hub/refs/heads/main/Modules/requirements.lua'))() or {}
+local BlacklistedExecutors = {
+    "velocity",
+}
 
 table.insert(Requirements,"cloneref")
 table.insert(Requirements,"isfile")
@@ -29,6 +32,16 @@ for i, v in pairs(Requirements[game.GameId]) do
 
     if not getgenv()[v] or typeof(getgenv()[v]) ~= "function" then
         table.insert(Missing, v)
+    end
+end
+
+if getgenv().identifyexecutor then
+    local Executor = getgenv().identifyexecutor()
+    for i, v in ipairs(BlacklistedExecutors) do
+        if string.find(Executor,v) then
+            table.insert(Missing, "Improper executor functionality")
+            break
+        end
     end
 end
 
